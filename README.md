@@ -44,6 +44,7 @@ app.synth();
 
 <details>
 <summary>cluster-autoscaler-autodiscover.yaml</summary>
+
 ```yaml
 
 apiVersion: v1
