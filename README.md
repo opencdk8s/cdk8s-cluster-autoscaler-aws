@@ -29,7 +29,6 @@ export class MyChart extends Chart {
     new ClusterAutoScaler(this, 'example', {
       createServiceAccount: true,
       command: [
-        '--expander=least-waste',
         `--node-group-auto-discovery=asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/${clusterName}`,
       ],
     })
@@ -264,7 +263,6 @@ spec:
             - ----stderrthreshold=info
             - --cloud-provider=aws
             - --skip-nodes-with-local-storage=false
-            - --expander=least-waste
             - --expander=least-waste
             - --node-group-auto-discovery=asg:tag=k8s.io/cluster-autoscaler/enabled,k8s.io/cluster-autoscaler/example
           image: k8s.gcr.io/autoscaling/cluster-autoscaler:v1.17.3
