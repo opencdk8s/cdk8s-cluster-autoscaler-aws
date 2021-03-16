@@ -45,6 +45,7 @@ app.synth();
 <details>
 <summary>cluster-autoscaler-autodiscover.yaml</summary>
 ```yaml
+
 apiVersion: v1
 kind: ServiceAccount
 metadata:
@@ -284,6 +285,7 @@ spec:
         - hostPath:
             path: /etc/ssl/certs/ca-bundle.crt
           name: ssl-certs
+
 ```
 </details>
 
