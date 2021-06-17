@@ -4,6 +4,7 @@
 
 Name|Description
 ----|-----------
+[AwsClusterAutoScalerPolicyHelper](#opencdk8s-cdk8s-cluster-autoscaler-aws-awsclusterautoscalerpolicyhelper)|Aws External Dns Policy class ,help you add policy to your Iam Role for service account.
 [ClusterAutoScaler](#opencdk8s-cdk8s-cluster-autoscaler-aws-clusterautoscaler)|*No description*
 
 
@@ -12,6 +13,40 @@ Name|Description
 Name|Description
 ----|-----------
 [ClusterAutoScalerOptions](#opencdk8s-cdk8s-cluster-autoscaler-aws-clusterautoscaleroptions)|*No description*
+
+
+
+## class AwsClusterAutoScalerPolicyHelper 🔹 <a id="opencdk8s-cdk8s-cluster-autoscaler-aws-awsclusterautoscalerpolicyhelper"></a>
+
+Aws External Dns Policy class ,help you add policy to your Iam Role for service account.
+
+
+### Initializer
+
+
+
+
+```ts
+new AwsClusterAutoScalerPolicyHelper()
+```
+
+
+
+### Methods
+
+
+#### *static* addPolicy(role)🔹 <a id="opencdk8s-cdk8s-cluster-autoscaler-aws-awsclusterautoscalerpolicyhelper-addpolicy"></a>
+
+
+
+```ts
+static addPolicy(role: any): any
+```
+
+* **role** (<code>any</code>)  *No description*
+
+__Returns__:
+* <code>any</code>
 
 
 
