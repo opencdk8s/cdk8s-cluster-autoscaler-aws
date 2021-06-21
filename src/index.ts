@@ -401,8 +401,6 @@ export class ClusterAutoScaler extends Construct {
       '--cloud-provider=aws',
       '--skip-nodes-with-local-storage=false',
       '--expander=least-waste',
-      '--balance-similar-node-groups',
-      '--skip-nodes-with-system-pods=false',
     ];
     if (comm) {
       comm.forEach(e => defaultCommand.push(e));
