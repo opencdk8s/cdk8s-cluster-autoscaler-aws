@@ -62,10 +62,8 @@
   },
   "bundledDependencies": [],
   "keywords": [
-    "aws",
     "cdk",
-    "cdk8s",
-    "external-dns-controller"
+    "cdk8s"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",

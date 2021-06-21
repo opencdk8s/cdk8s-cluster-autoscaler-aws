@@ -10,7 +10,7 @@ const project = new ConstructLibraryCdk8s({
   stability: 'experimental',
   jsiiFqn: 'projen.ConstructLibraryCdk8s',
   name: '@opencdk8s/cdk8s-cluster-autoscaler-aws',
-  keywords: ['aws', 'cdk8s', 'external-dns-controller', 'cdk'],
+  keywords: ['cdk8s', 'cdk'],
   npmAccess: 'public',
   repositoryUrl: 'https://github.com/opencdk8s/cdk8s-cluster-autoscaler-aws',
   python: {
@@ -27,7 +27,7 @@ const project = new ConstructLibraryCdk8s({
     `@aws-cdk/aws-iam@^${CDK_VERSION}`,
     `@aws-cdk/core@^${CDK_VERSION}`,
   ],
-  releaseEveryCommit: false,
+  releaseEveryCommit: true,
   dependabot: false,
   gitignore: ['package.json', 'test/'],
   pullRequestTemplate: false,
@@ -35,7 +35,7 @@ const project = new ConstructLibraryCdk8s({
   codeCov: true,
   clobber: false,
   readme: true,
-  mergify: false,
+  mergify: true,
 });
 
 const common_exclude = ['cdk.out', 'package.json', 'yarn-error.log', 'coverage', '.DS_Store', '.idea', '.vs_code'];
