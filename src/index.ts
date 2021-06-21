@@ -397,7 +397,7 @@ export class ClusterAutoScaler extends Construct {
     const defaultCommand = [
       './cluster-autoscaler',
       '--v=4',
-      '----stderrthreshold=info',
+      '--stderrthreshold=info',
       '--cloud-provider=aws',
       '--skip-nodes-with-local-storage=false',
       '--expander=least-waste',
