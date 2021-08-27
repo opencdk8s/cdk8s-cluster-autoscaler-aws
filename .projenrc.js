@@ -1,6 +1,6 @@
 const { ConstructLibraryCdk8s } = require('projen');
 
-const CDK_VERSION = '1.92.0';
+const CDK_VERSION = '1.113.0';
 
 const project = new ConstructLibraryCdk8s({
   author: 'Hunter Thompson',
@@ -19,13 +19,13 @@ const project = new ConstructLibraryCdk8s({
   },
   peerDeps: [
     'constructs@^3.3.65',
-    `@aws-cdk/aws-iam@^${CDK_VERSION}`,
-    `@aws-cdk/core@^${CDK_VERSION}`,
+    `@aws-cdk/aws-iam@${CDK_VERSION}`,
+    `@aws-cdk/core@${CDK_VERSION}`,
   ],
   devDeps: [
     'constructs@^3.3.65',
-    `@aws-cdk/aws-iam@^${CDK_VERSION}`,
-    `@aws-cdk/core@^${CDK_VERSION}`,
+    `@aws-cdk/aws-iam@${CDK_VERSION}`,
+    `@aws-cdk/core@${CDK_VERSION}`,
   ],
   releaseEveryCommit: true,
   dependabot: false,
