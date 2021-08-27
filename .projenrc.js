@@ -1,11 +1,15 @@
 const { ConstructLibraryCdk8s } = require('projen');
 
-const CDK_VERSION = '1.92.0';
-
+const CDK_VERSION = '1.113.0';
 const project = new ConstructLibraryCdk8s({
   author: 'Hunter Thompson',
   authorAddress: 'aatman@auroville.org.in',
-  cdk8sVersion: '1.0.0-beta.10',
+  cdk8sVersion: '1.0.0-beta.11',
+  cdk8sPlusVersion: '1.0.0-beta.15',
+  constructsVersion: '3.3.134',
+  constructsVersionPinning: true,
+  cdk8sPlusVersionPinning: true,
+  cdk8sVersionPinning: true,
   defaultReleaseBranch: 'development',
   stability: 'experimental',
   jsiiFqn: 'projen.ConstructLibraryCdk8s',
@@ -18,27 +22,24 @@ const project = new ConstructLibraryCdk8s({
     module: 'cdk8s_cluster_autoscaler_aws',
   },
   peerDeps: [
-    'constructs@^3.3.65',
-    `@aws-cdk/aws-iam@^${CDK_VERSION}`,
-    `@aws-cdk/core@^${CDK_VERSION}`,
+    `@aws-cdk/aws-iam@${CDK_VERSION}`,
+    `@aws-cdk/core@${CDK_VERSION}`,
   ],
   devDeps: [
-    'constructs@^3.3.65',
-    `@aws-cdk/aws-iam@^${CDK_VERSION}`,
-    `@aws-cdk/core@^${CDK_VERSION}`,
+    `@aws-cdk/aws-iam@${CDK_VERSION}`,
+    `@aws-cdk/core@${CDK_VERSION}`,
   ],
   releaseEveryCommit: true,
   dependabot: false,
   gitignore: ['package.json', 'test/'],
   pullRequestTemplate: false,
-  releaseBranches: ['development'],
   codeCov: true,
   clobber: false,
   readme: true,
   mergify: true,
 });
 
-const common_exclude = ['cdk.out', 'package.json', 'yarn-error.log', 'coverage', '.DS_Store', '.idea', '.vs_code'];
+const common_exclude = ['cdk.out', 'yarn-error.log', 'package.json', 'coverage', '.DS_Store', '.idea', '.vs_code'];
 project.gitignore.exclude(...common_exclude);
 
 project.synth();
