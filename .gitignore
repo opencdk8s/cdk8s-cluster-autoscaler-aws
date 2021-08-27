@@ -28,7 +28,6 @@ jspm_packages/
 *.tgz
 .yarn-integrity
 .cache
-package.json
 test/
 !/.projenrc.js
 /test-reports/
@@ -51,6 +50,7 @@ tsconfig.json
 !/API.md
 cdk.out
 yarn-error.log
+package.json
 coverage
 .DS_Store
 .idea

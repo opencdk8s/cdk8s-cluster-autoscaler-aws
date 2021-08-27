@@ -35,7 +35,7 @@ const project = new ConstructLibraryCdk8s({
   mergify: true,
 });
 
-const common_exclude = ['cdk.out', 'yarn-error.log', 'coverage', '.DS_Store', '.idea', '.vs_code'];
+const common_exclude = ['cdk.out', 'yarn-error.log', 'package.json', 'coverage', '.DS_Store', '.idea', '.vs_code'];
 project.gitignore.exclude(...common_exclude);
 
 project.synth();
