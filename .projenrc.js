@@ -31,7 +31,6 @@ const project = new ConstructLibraryCdk8s({
   ],
   releaseEveryCommit: true,
   dependabot: false,
-  gitignore: ['package.json', 'test/'],
   pullRequestTemplate: false,
   codeCov: true,
   clobber: false,
