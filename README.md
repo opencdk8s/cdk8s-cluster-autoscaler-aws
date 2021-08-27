@@ -323,7 +323,7 @@ $ pip install cdk8s-cluster-autoscaler-aws
    |Command|Description
    |-|-
    |`yarn compile`|Compiles typescript => javascript
-   |`yarn watch`|Watch & compile
+   |`yarn watch`| watch & compile
    |`yarn test`|Run unit test & linter through jest
    |`yarn test -u`|Update jest snapshots
    |`yarn run package`|Creates a `dist` with packages for all languages.
