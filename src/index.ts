@@ -49,7 +49,7 @@ export class ClusterAutoScaler extends Construct {
   *
   * @default - true
   */
-  public readonly createServiceAccount?: boolean
+  public readonly createServiceAccount?: boolean;
 
   /**
    * Service Account Name

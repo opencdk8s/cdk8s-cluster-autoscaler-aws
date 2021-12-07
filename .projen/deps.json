@@ -2,12 +2,12 @@
   "dependencies": [
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "1.113.0",
+      "version": "1.134.0",
       "type": "build"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.113.0",
+      "version": "1.134.0",
       "type": "build"
     },
     {
@@ -16,34 +16,27 @@
     },
     {
       "name": "@types/node",
-      "version": "^10.17.0",
+      "version": "^14.17.0",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
+      "version": "^5",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "type": "build"
-    },
-    {
-      "name": "cdk8s-plus-17",
-      "version": "1.0.0-beta.15",
+      "version": "^5",
       "type": "build"
     },
     {
       "name": "cdk8s",
-      "version": "1.0.0-beta.11",
+      "version": "1.2.1",
       "type": "build"
     },
     {
       "name": "constructs",
-      "version": "3.3.134",
-      "type": "build"
-    },
-    {
-      "name": "eslint",
+      "version": "3.3.162",
       "type": "build"
     },
     {
@@ -59,12 +52,17 @@
       "type": "build"
     },
     {
+      "name": "eslint",
+      "version": "^8",
+      "type": "build"
+    },
+    {
       "name": "jest",
       "type": "build"
     },
     {
       "name": "jest-junit",
-      "version": "^12",
+      "version": "^13",
       "type": "build"
     },
     {
@@ -111,27 +109,22 @@
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "1.113.0",
+      "version": "1.134.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "1.113.0",
-      "type": "peer"
-    },
-    {
-      "name": "cdk8s-plus-17",
-      "version": "1.0.0-beta.15",
+      "version": "1.134.0",
       "type": "peer"
     },
     {
       "name": "cdk8s",
-      "version": "1.0.0-beta.11",
+      "version": "^1.2.1",
       "type": "peer"
     },
     {
       "name": "constructs",
-      "version": "3.3.134",
+      "version": "^3.3.162",
       "type": "peer"
     }
   ],
