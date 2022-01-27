@@ -1,109 +1,252 @@
-# API Reference
+# API Reference <a name="API Reference" id="api-reference"></a>
 
-**Classes**
+## Constructs <a name="Constructs" id="Constructs"></a>
 
-Name|Description
-----|-----------
-[AwsClusterAutoScalerPolicyHelper](#opencdk8s-cdk8s-cluster-autoscaler-aws-awsclusterautoscalerpolicyhelper)|Aws External Dns Policy class ,help you add policy to your Iam Role for service account.
-[ClusterAutoScaler](#opencdk8s-cdk8s-cluster-autoscaler-aws-clusterautoscaler)|*No description*
+### ClusterAutoScaler <a name="ClusterAutoScaler" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler"></a>
 
+#### Initializers <a name="Initializers" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.Initializer"></a>
 
-**Structs**
+```typescript
+import { ClusterAutoScaler } from '@opencdk8s/cdk8s-cluster-autoscaler-aws'
 
-Name|Description
-----|-----------
-[ClusterAutoScalerOptions](#opencdk8s-cdk8s-cluster-autoscaler-aws-clusterautoscaleroptions)|*No description*
-
-
-
-## class AwsClusterAutoScalerPolicyHelper 🔹 <a id="opencdk8s-cdk8s-cluster-autoscaler-aws-awsclusterautoscalerpolicyhelper"></a>
-
-Aws External Dns Policy class ,help you add policy to your Iam Role for service account.
-
-
-### Initializer
-
-
-
-
-```ts
-new AwsClusterAutoScalerPolicyHelper()
-```
-
-
-
-### Methods
-
-
-#### *static* addPolicy(role)🔹 <a id="opencdk8s-cdk8s-cluster-autoscaler-aws-awsclusterautoscalerpolicyhelper-addpolicy"></a>
-
-
-
-```ts
-static addPolicy(role: any): any
-```
-
-* **role** (<code>any</code>)  *No description*
-
-__Returns__:
-* <code>any</code>
-
-
-
-## class ClusterAutoScaler 🔹 <a id="opencdk8s-cdk8s-cluster-autoscaler-aws-clusterautoscaler"></a>
-
-
-
-__Implements__: [IConstruct](#constructs-iconstruct)
-__Extends__: [Construct](#constructs-construct)
-
-### Initializer
-
-
-
-
-```ts
 new ClusterAutoScaler(scope: Construct, name: string, opts: ClusterAutoScalerOptions)
 ```
 
-* **scope** (<code>[Construct](#constructs-construct)</code>)  *No description*
-* **name** (<code>string</code>)  *No description*
-* **opts** (<code>[ClusterAutoScalerOptions](#opencdk8s-cdk8s-cluster-autoscaler-aws-clusterautoscaleroptions)</code>)  *No description*
-  * **command** (<code>Array<string></code>)  Extra commands for controller. __*Default*__: [ './cluster-autoscaler', '--v=4', '----stderrthreshold=info', '--cloud-provider=aws', '--skip-nodes-with-local-storage=false', '--expander=least-waste' ]
-  * **createServiceAccount** (<code>boolean</code>)  service account for aws-load-balancer-controller. __*Default*__: true
-  * **image** (<code>string</code>)  image for deployment. __*Optional*__
-  * **namespace** (<code>string</code>)  Namespace. __*Default*__: kube-system
-  * **serviceAccountName** (<code>string</code>)  Service Account Name. __*Default*__: cluster-autoscaler
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | *No description.* |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.Initializer.parameter.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.Initializer.parameter.opts">opts</a></code> | <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions">ClusterAutoScalerOptions</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.Initializer.parameter.name"></a>
+
+- *Type:* string
+
+---
+
+##### `opts`<sup>Required</sup> <a name="opts" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.Initializer.parameter.opts"></a>
+
+- *Type:* <a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions">ClusterAutoScalerOptions</a>
+
+---
 
 
 
-### Properties
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.command">command</a></code> | <code>string[]</code> | Extra commands for controller. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.createServiceAccount">createServiceAccount</a></code> | <code>boolean</code> | service account for aws-load-balancer-controller. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.image">image</a></code> | <code>string</code> | image for deployment. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.namespace">namespace</a></code> | <code>string</code> | Namespace. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.serviceAccountName">serviceAccountName</a></code> | <code>string</code> | Service Account Name. |
+
+---
+
+##### `command`<sup>Optional</sup> <a name="command" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.command"></a>
+
+```typescript
+public readonly command: string[];
+```
+
+- *Type:* string[]
+- *Default:* [ './cluster-autoscaler', '--v=4', '----stderrthreshold=info', '--cloud-provider=aws', '--skip-nodes-with-local-storage=false', '--expander=least-waste' ]
+
+Extra commands for controller.
+
+---
+
+##### `createServiceAccount`<sup>Optional</sup> <a name="createServiceAccount" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.createServiceAccount"></a>
+
+```typescript
+public readonly createServiceAccount: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+service account for aws-load-balancer-controller.
+
+---
+
+##### `image`<sup>Optional</sup> <a name="image" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.image"></a>
+
+```typescript
+public readonly image: string;
+```
+
+- *Type:* string
+
+image for deployment.
+
+---
+
+##### `namespace`<sup>Optional</sup> <a name="namespace" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.namespace"></a>
+
+```typescript
+public readonly namespace: string;
+```
+
+- *Type:* string
+- *Default:* kube-system
+
+Namespace.
+
+---
+
+##### `serviceAccountName`<sup>Optional</sup> <a name="serviceAccountName" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScaler.property.serviceAccountName"></a>
+
+```typescript
+public readonly serviceAccountName: string;
+```
+
+- *Type:* string
+- *Default:* cluster-autoscaler
+
+Service Account Name.
+
+---
 
 
-Name | Type | Description 
------|------|-------------
-**command**?🔹 | <code>Array<string></code> | Extra commands for controller.<br/>__*Default*__: [ './cluster-autoscaler', '--v=4', '----stderrthreshold=info', '--cloud-provider=aws', '--skip-nodes-with-local-storage=false', '--expander=least-waste' ]
-**createServiceAccount**?🔹 | <code>boolean</code> | service account for aws-load-balancer-controller.<br/>__*Default*__: true
-**image**?🔹 | <code>string</code> | image for deployment.<br/>__*Optional*__
-**namespace**?🔹 | <code>string</code> | Namespace.<br/>__*Default*__: kube-system
-**serviceAccountName**?🔹 | <code>string</code> | Service Account Name.<br/>__*Default*__: cluster-autoscaler
+## Structs <a name="Structs" id="Structs"></a>
+
+### ClusterAutoScalerOptions <a name="ClusterAutoScalerOptions" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions"></a>
+
+#### Initializer <a name="Initializer" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.Initializer"></a>
+
+```typescript
+import { ClusterAutoScalerOptions } from '@opencdk8s/cdk8s-cluster-autoscaler-aws'
+
+const clusterAutoScalerOptions: ClusterAutoScalerOptions = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.command">command</a></code> | <code>string[]</code> | Extra commands for controller. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.createServiceAccount">createServiceAccount</a></code> | <code>boolean</code> | service account for aws-load-balancer-controller. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.image">image</a></code> | <code>string</code> | image for deployment. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.namespace">namespace</a></code> | <code>string</code> | Namespace. |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.serviceAccountName">serviceAccountName</a></code> | <code>string</code> | Service Account Name. |
+
+---
+
+##### `command`<sup>Optional</sup> <a name="command" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.command"></a>
+
+```typescript
+public readonly command: string[];
+```
+
+- *Type:* string[]
+- *Default:* [ './cluster-autoscaler', '--v=4', '----stderrthreshold=info', '--cloud-provider=aws', '--skip-nodes-with-local-storage=false', '--expander=least-waste' ]
+
+Extra commands for controller.
+
+---
+
+##### `createServiceAccount`<sup>Optional</sup> <a name="createServiceAccount" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.createServiceAccount"></a>
+
+```typescript
+public readonly createServiceAccount: boolean;
+```
+
+- *Type:* boolean
+- *Default:* true
+
+service account for aws-load-balancer-controller.
+
+---
+
+##### `image`<sup>Optional</sup> <a name="image" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.image"></a>
+
+```typescript
+public readonly image: string;
+```
+
+- *Type:* string
+
+image for deployment.
+
+---
+
+##### `namespace`<sup>Optional</sup> <a name="namespace" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.namespace"></a>
+
+```typescript
+public readonly namespace: string;
+```
+
+- *Type:* string
+- *Default:* kube-system
+
+Namespace.
+
+---
+
+##### `serviceAccountName`<sup>Optional</sup> <a name="serviceAccountName" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.ClusterAutoScalerOptions.property.serviceAccountName"></a>
+
+```typescript
+public readonly serviceAccountName: string;
+```
+
+- *Type:* string
+- *Default:* cluster-autoscaler
+
+Service Account Name.
+
+---
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### AwsClusterAutoScalerPolicyHelper <a name="AwsClusterAutoScalerPolicyHelper" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.AwsClusterAutoScalerPolicyHelper"></a>
+
+Aws External Dns Policy class ,help you add policy to your Iam Role for service account.
+
+#### Initializers <a name="Initializers" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.AwsClusterAutoScalerPolicyHelper.Initializer"></a>
+
+```typescript
+import { AwsClusterAutoScalerPolicyHelper } from '@opencdk8s/cdk8s-cluster-autoscaler-aws'
+
+new AwsClusterAutoScalerPolicyHelper()
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+
+---
 
 
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
-## struct ClusterAutoScalerOptions 🔹 <a id="opencdk8s-cdk8s-cluster-autoscaler-aws-clusterautoscaleroptions"></a>
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#@opencdk8s/cdk8s-cluster-autoscaler-aws.AwsClusterAutoScalerPolicyHelper.addPolicy">addPolicy</a></code> | *No description.* |
 
+---
 
+##### `addPolicy` <a name="addPolicy" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.AwsClusterAutoScalerPolicyHelper.addPolicy"></a>
 
+```typescript
+import { AwsClusterAutoScalerPolicyHelper } from '@opencdk8s/cdk8s-cluster-autoscaler-aws'
 
+AwsClusterAutoScalerPolicyHelper.addPolicy(role: any)
+```
 
+###### `role`<sup>Required</sup> <a name="role" id="@opencdk8s/cdk8s-cluster-autoscaler-aws.AwsClusterAutoScalerPolicyHelper.addPolicy.parameter.role"></a>
 
-Name | Type | Description 
------|------|-------------
-**command**?🔹 | <code>Array<string></code> | Extra commands for controller.<br/>__*Default*__: [ './cluster-autoscaler', '--v=4', '----stderrthreshold=info', '--cloud-provider=aws', '--skip-nodes-with-local-storage=false', '--expander=least-waste' ]
-**createServiceAccount**?🔹 | <code>boolean</code> | service account for aws-load-balancer-controller.<br/>__*Default*__: true
-**image**?🔹 | <code>string</code> | image for deployment.<br/>__*Optional*__
-**namespace**?🔹 | <code>string</code> | Namespace.<br/>__*Default*__: kube-system
-**serviceAccountName**?🔹 | <code>string</code> | Service Account Name.<br/>__*Default*__: cluster-autoscaler
+- *Type:* any
+
+---
+
 
 
 

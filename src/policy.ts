@@ -1,4 +1,4 @@
-import * as iam from '@aws-cdk/aws-iam';
+import * as iam from 'aws-cdk-lib/aws-iam';
 
 const AwsClusterAutoScalerPolicy = [
   {
