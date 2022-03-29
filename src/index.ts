@@ -365,8 +365,8 @@ export class ClusterAutoScaler extends Construct {
               name: 'cluster-autoscaler',
               resources: {
                 limits: {
-                  cpu: '100m',
-                  memory: '300Mi',
+                  cpu: 1,
+                  memory: '1Gi',
                 },
                 requests: {
                   cpu: '100m',
