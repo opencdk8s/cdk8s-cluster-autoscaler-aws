@@ -4,7 +4,6 @@
 !/.projen/deps.json
 !/.projen/files.json
 !/.github/workflows/pull-request-lint.yml
-!/.github/workflows/stale.yml
 !/package.json
 !/LICENSE
 !/.npmignore
@@ -54,4 +53,3 @@ coverage
 .DS_Store
 .idea
 .vs_code
-!/.github/workflows/upgrade-development.yml
