@@ -24,6 +24,12 @@ const project = new ConstructLibraryCdk8s({
     `aws-cdk-lib@${CDK_VERSION}`,
   ],
   releaseEveryCommit: true,
+  publishToGo: {
+    gitUserName: 'Hunter-Thompson',
+    gitUserEmail: 'aatman@auroville.org.in',
+    moduleName: 'github.com/opencdk8s/cdk8s-cluster-autoscaler-aws-go',
+  },
+  depsUpgrade: false,
   dependabot: false,
   pullRequestTemplate: false,
   codeCov: true,
